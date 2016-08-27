@@ -2,8 +2,13 @@
 $(function($){
 
 	var classes = [];
+	var classesName = [];
 	var history = {};
 	var i = 0;
+
+	if(localStorage.classesName){
+		classesName = localStorage.classesName;
+	}
 
 	if (localStorage.classes) {
 		history = JSON.parse(localStorage.classes);
@@ -111,8 +116,9 @@ $(function($){
 				if (!repeat) {
 					var classInfo = new ClassInfo(classesControl.className,classesControl.students);
 					history.classInfo.push(classInfo);
-					console.log(history);
+					classesName.push(classesControl.className);
 					localStorage.setItem('classes',JSON.stringify(history));
+					localStorage.setItem('classesName',classesName);
 				}else{
 					$('#helpBlock').show();
 				}

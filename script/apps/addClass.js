@@ -3,7 +3,6 @@ $(function(){
 	//班级操作部分
 	var btns = $('.classSquare');
 	btns = $(btns);
-	var plusBtn = $('.plusBtn');
 	var removes = $('.classSquare .icon-remove');
 	var i = 1;
 
@@ -13,19 +12,20 @@ $(function(){
 	if (localStorage.classesName) {
 
 		//classesName save all class's name
-		var classes = JSON.parse(localStorage.classesName);
+		var classes = localStorage.classesName;
+		console.log(classes);
 	 	var plusbtn_loc = 0;
-	 	$.each(classes,function(index,item){
+	 	for (var index = 0; index < classes.length; index++) {
 	 		$(btns[index]).addClass('hasClassName');
-	 		$(btns[index]).children('span').text(item);
+	 		$(btns[index]).children('span').text(classes[index]);
 	 		plusbtn_loc = index;
-	 	});
+	 	}
 	 	$(btns[plusbtn_loc+1]).addClass('plusBtn');
 	}else{
 		$(btns[0]).addClass('plusBtn');
 	}
 
-
+	var plusBtn = $('.plusBtn');
 	$('.icon-plus').hide();
 	$('.plusBtn .icon-plus').show();
 
@@ -83,9 +83,10 @@ $(function(){
 	});
 
 	//点击班级进入班级入口
-	btns.on('click',function(){
-		window.location = "pages/classesControl.html";
-	});
+	// btns.on('click',function(){
+	// 	window.location = "pages/classesControl.html";
+	// });
+	plusBtn.on('click',toClassesControl);
 	addNew.on('click',click_addNew);
 	btns.on('longTap',showRemoves);
 	removes.on('click',removeClasses);
