@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.addNew {
+  padding-top: 10%;
+  padding-bottom: 520px;
+  margin-bottom: -500px;
+  background-image: url('../image/classroom.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.row {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 10%;
+}
+.classSquare {
+  position: relative;
+  height: 75px;
+  line-height: 75px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: inline-block;
+  text-align: center;
+}
+.classSquare .icon-remove {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: -1;
+}
+.plusBtn {
+  color: rgba(0, 0, 0, 0.4);
+}
+.classes-control-content {
+  width: 90%;
+  margin: 15% auto;
+}
+.classes-control-content form .form-group {
+  position: relative;
+}
+.classes-control-content form .form-group label {
+  position: relative;
+  top: .5em;
+  text-align: right;
+}
+.classes-control-content form .form-group .help-block {
+  display: none;
+  color: red;
+  text-align: right;
+}
+.classes-control-content .addStudent {
+  position: relative;
+  margin-top: 10%;
+  width: 100%;
+  text-align: center;
+}
+.classes-control-content .addStudent .row {
+  width: 100%;
+  padding-bottom: .5em;
+  margin: 0 0;
+}
+.classes-control-content .addStudent .col-xs-4 {
+  padding: 0;
+}
+.classes-control-content .addStudent .addStudent-btns {
+  position: relative;
+  margin-top: 10%;
+}
+.classes-control-content .addStudent .addStudent-btns .addStudent-btns-save {
+  position: absolute;
+  right: 5%;
+}
+.classes-control-content .addStudent .addStudent-btns .addStudent-btns-next {
+  position: absolute;
+  left: 5%;
+}
+.classes-control-title {
+  position: relative;
+  height: 48px;
+  line-height: 48px;
+  margin-top: 0;
+  text-align: center;
+  background-color: #dc5050;
+}
+.classes-control-title i {
+  position: absolute;
+  left: 1em;
+  top: .5em;
+  vertical-align: middle;
+}
+.classes-control-title .classes-control-edit {
+  position: absolute;
+  right: 1em;
+  top: .5em;
+}
+.classes-control-table {
+  text-align: center;
+}
+.classes-control-table .classes-control-table-title {
+  text-align: left;
+}
+.classes-control-functions {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  z-index: 99;
+}

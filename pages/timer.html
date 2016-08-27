@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width:device-width,initial-scale=1">
+    <title>timer</title>
+    <link rel="stylesheet" type="text/css" href="../ss/bootstrap.min.css">
+</head>
+
+<body id="body" class='body'>
+    <div id="timer" class="text-info h1">
+        <h1>00:00.00</h1>
+        <a class="btn btn-info" id="reset"><span class="glyphicon glyphicon-refresh"></span></a>
+    </div>
+    <div id='btn-group' class="btn-group btn-group-justified">
+        <a class="btn btn-info" id="start"><span class="glyphicon glyphicon-play"></span></a>
+        <a class="btn btn-info" id="count"><span class="glyphicon glyphicon-ok-circle"></span></a>
+        <a class="btn btn-info" id="show"><span class="glyphicon glyphicon-user"></span></a>
+        <a class="btn btn-info" id="showHistory"><span class="glyphicon glyphicon-th"></span></a>
+        </div>
+    <div id="blank">
+        <div id="input_name">
+            <div class="form-group">
+                <div class="col-md-8">
+                    <input type="text" placeholder="请输入表单名" id="addTittle" class="form-control input-lg">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-8">
+                    <input type="text" placeholder="请输入姓名" id="addName" class="form-control input-lg">
+                </div>
+            </div>
+            <div class="btn-group btn-group-justified form-group">
+                <a class="btn btn-lg btn-info" id="toNext">next</a>
+                <a class="btn btn-lg btn-info" id="Ok">ok</a>
+            </div>
+        </div>
+        <div id="wrapperForResult">
+            <div class="table-responsive" id="divForResult">
+                <table id="result" class="table table-striped">
+                    <!-- <thead class="h2">成绩</thead> -->
+                </table>
+            </div>
+        </div>
+        <div class="table-responsive" id="divForGrade">
+            <table id="grade" class="table table-striped"></table>
+        </div>
+        <div id="flashContent"><img src="image/clock.jpg" alt=""></div>
+    </div>
+    <button id="allNameOK"></button>
+    <script type="text/javascript" src="../script/libs/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="../script/libs/bootstrap.min.js"></script>
+    <script type="text/javascript" src="script/test.js"></script>
+</body>
+
+</html>
