@@ -8,16 +8,22 @@ $(function(){
 
 	var addNew = $('.addNew');
 
+	//点击.hasClassName按钮，跳转至已有班级入口
+	var toHasClassName = function(){
+		localStorage.nowClassName = $(this).data('className');
+		window.location = 'pages/alreadyClass.html';
+	};
+
 	//初始化后对页面内容进行渲染
 	if (localStorage.classesName) {
 
 		//classesName save all class's name
-		var classes = localStorage.classesName;
-		console.log(classes);
+		var classes = localStorage.classesName.split(',');
 	 	var plusbtn_loc = 0;
 	 	for (var index = 0; index < classes.length; index++) {
-	 		$(btns[index]).addClass('hasClassName');
+	 		$(btns[index]).addClass('hasClassName').data('className',classes[index]);
 	 		$(btns[index]).children('span').text(classes[index]);
+	 		$(btns[index]).on('click',toHasClassName);
 	 		plusbtn_loc = index;
 	 	}
 	 	$(btns[plusbtn_loc+1]).addClass('plusBtn');
@@ -70,11 +76,6 @@ $(function(){
 	//点击带加号的按钮跳转至添加班级入口
 	var toClassesControl = function(){
 		window.location = 'pages/classesControl.html';
-	};
-
-	//点击.hasClassName按钮，跳转至已有班级入口
-	var toHasClassName = function(){
-		window.location = '';
 	};
 
 	// 横滑跳转

@@ -14,7 +14,8 @@
     <div class="classes-control">
         <h3 class="classes-control-title">
         <i class="icon-angle-left"></i>
-        添加班级
+        <span class="classes-control-title-text"></span>
+        (共<span class="classes-control-headcount"></span>人)
         <a class="classes-control-edit h4">编辑</a>
         </h3>
         <div class="classes-control-content">
@@ -49,19 +50,15 @@
 
                 <div class="row addStudent-btns">
                     <button class="btn btn-default addStudent-btns-next">下一个</button>
-                    <button class="btn btn-default addStudent-btns-save">完成</button>
+                    <button class="btn btn-default addStudent-btns-save">保存</button>
                 </div>
             </div>
         </div>
 
         <!-- 记录名单 -->
-        <div class="table-responsive classes-control-table">
-            <h4 class="classes-control-table-title"></h4>
-            <table class="table table-striped">
+        <div class="table-responsive">
+            <table class="table table-striped classes-control-table">
             <tr><td>编号</td><td>学号</td><td>姓名</td><td>性别</td><td></td></tr>
-                <tbody>
-                    
-                </tbody>
             </table>
         </div>
 
@@ -86,8 +83,9 @@
     <!-- 底部入口 -->
     <div class="classes-control-functions">
         <div class="row">
-            <div class="col-xs-6"><button class="btn btn-default classes-control-functions-timer">计时</button></div>
-            <div class="col-xs-6"><button class="btn btn-default classes-control-functions-counter">计次</button></div>
+            <div class="col-xs-4"><button class="btn btn-default classes-control-functions-timer">计时</button></div>
+            <div class="col-xs-4"><button class="btn btn-default classes-control-functions-counter">计次</button></div>
+            <div class="col-xs-4"><button class="btn btn-default classes-control-functions-history">已有记录</button></div>
         </div>
     </div>
 
@@ -95,6 +93,6 @@
     <script type="text/javascript" src="../script/libs/zepto.min.js"></script>
     <script type="text/javascript" src="../script/libs/jquery-1.12.0.min.js"></script>
     <script type="text/javascript" src="../script/libs/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../script/apps/classesControl.js"></script>
+    <script type="text/javascript" src="../script/apps/alreadyClass.js"></script>
 </body>
 </html>

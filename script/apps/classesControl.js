@@ -7,16 +7,7 @@ $(function($){
 	var i = 0;
 
 	if(localStorage.classesName){
-		classesName = localStorage.classesName;
-	}
-
-	if (localStorage.classes) {
-		history = JSON.parse(localStorage.classes);
-	 	classes = history.classInfo;	//获取存放所有的班级的字段
-	}else{
-		history = {
-			classInfo:[]
-		};
+		classesName = localStorage.classesName.split(',');
 	}
 
 	/**
@@ -115,9 +106,8 @@ $(function($){
 				var repeat = false;
 				if (!repeat) {
 					var classInfo = new ClassInfo(classesControl.className,classesControl.students);
-					history.classInfo.push(classInfo);
 					classesName.push(classesControl.className);
-					localStorage.setItem('classes',JSON.stringify(history));
+					localStorage.setItem(classesControl.className,JSON.stringify(classInfo));
 					localStorage.setItem('classesName',classesName);
 				}else{
 					$('#helpBlock').show();
@@ -146,7 +136,7 @@ $(function($){
 	});
 
 	$('#class-control-modal-save').on('click',function(e){
-		$('#class-control-modal modal-body p').text('保存成功');
+		$('#class-control-modal .modal-body p').text('保存成功');
 		classesControl.toSave();
 		$('#class-control-modal-close').trigger('click');
 		e.stopPropagation();
@@ -155,7 +145,7 @@ $(function($){
 		window.location = '../index.html';
 	});
 
-	//点击编辑按钮，可也删除记录
+	//点击编辑按钮，删除记录
 	$('.classes-control-edit').on('click',function(){
 		$('.class-control-table-item-delete').show();
 
