@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width:device-width,initial-scale=1">
+    <title>timer</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Font-Awesome-3.2.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body id="body" class='body' style="overflow:scroll">
+
+    <!-- 红色title部分 -->
+    <h3 class="classes-control-title">
+    <i class="icon-angle-left"></i>
+    <span class="classes-control-title-text">计数</span>
+    (共<span class="classes-control-headcount"></span>人)
+    <a class="classes-control-edit h4">编辑</a>
+    </h3>
+
+    <!-- 顶部输入框和下拉菜单 -->
+    <div class="container-fluid topPanel">
+        <div class="row">
+            <div class="col-xs-8">
+                    <div class="form-group">
+                        <label for="exampleInputName2">科目：</label>
+                        <input type="text" class="form-control" id="course" placeholder="科目">
+                    </div>
+            </div>
+            <div class="col-xs-4">
+                <span class="labelForSex">类别：</span>
+                <select name="" id="sex">
+                    <option value="man">男</option>
+                    <option value="woman">女</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- 记录名单 -->
+        <div class="table-responsive">
+            <table class="table table-striped classes-control-table">
+            <tr><td>编号</td><td>学号</td><td>姓名</td><td>成绩</td><td></td></tr>
+            </table>
+        </div>
+
+
+    <!--  模态弹窗部分 -->
+
+    <!-- 删除提示 -->
+    <div class="modal" id="mymodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal" id="closeMymodal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>确认删除？</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="continueDelete" data-dismiss="modal">删除</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 输入完成提示 -->
+    <div class="modal" id="mymodal_next">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-infor h4">所有姓名输入完毕</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-dismiss="modal" id="closeNameAllOK">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 保存提示 -->
+    <div class="modal" id="class-control-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" data-dismiss="modal" id="class-control-modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>确认保存当前名单？</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" id="class-control-modal-close">取消</button>
+                        <button type="button" class="btn btn-primary" id="class-control-modal-save" data-dismiss="modal">保存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- 底部入口 -->
+    <div class="classes-control-functions">
+        <div class="row">
+            <div class="col-xs-3"><button class="btn btn-default classes-control-functions-firstPage">首页</button></div>
+            <div class="col-xs-3"><button class="btn btn-default classes-control-functions-timer">计时</button></div>
+            <div class="col-xs-3"><button class="btn btn-default classes-control-functions-counter">记次</button></div>
+            <div class="col-xs-3"><button class="btn btn-default classes-control-functions-history">已有记录</button></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../script/libs/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="../script/libs/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../script/apps/count.js"></script>
+</body>
+
+</html>

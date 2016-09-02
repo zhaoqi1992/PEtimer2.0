@@ -137,7 +137,7 @@ $(function($) {
 				}
 			});
 
-			//下一个按钮添加事件
+			//"下一个"按钮添加事件
 			$('.addStudent-btns-next').on('click',alreadyClass.next);
 
 			//点击保存按钮，弹出modal，提示保存成功
@@ -167,6 +167,16 @@ $(function($) {
 				if(modalByBackspace){
 					window.location = '../index.html';
 				}
+			});
+
+			//点击计时按钮，进入计时界面
+			$('.classes-control-functions-timer').on('click',function(){
+				window.location = 'timer.html';
+			});
+
+			//点击计数按钮，进入计数界面
+			$('.classes-control-functions-counter').on('click',function(){
+				window.location = 'count.html';
 			});
 		}
 	};

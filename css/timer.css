@@ -1,0 +1,38 @@
+
+div#btn-group.btn-group {
+	margin-bottom: 8%
+}
+div#input_name #addName {
+	margin-bottom: 10%
+}
+div#wrapperForResult {
+	position: relative
+}
+div#divForResult #deleteButton {
+	position: absolute;
+	bottom: -100%;
+	left: 40%;
+}
+div#timer{
+	position: relative;
+	margin:0;
+}
+#timer .timePanel{
+	text-align: center;
+}
+div#timer a#reset,{
+	position: relative;
+}
+div#blank{
+	// padding-bottom: 100%;
+}
+button#allNameOK{
+	display: none;
+}
+div#flashContent img{
+	width: 70%;
+	height: 100%;
+	position: relative;
+	left: 15%;
+	bottom: -10%;
+}

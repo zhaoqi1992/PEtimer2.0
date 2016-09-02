@@ -100,6 +100,11 @@ body {
   right: 1em;
   top: .5em;
 }
+.classes-control-title .classes-control-excel {
+  position: absolute;
+  right: 3.5em;
+  top: .5em;
+}
 .classes-control-table {
   text-align: center;
 }
@@ -113,4 +118,25 @@ body {
   background-color: #fff;
   text-align: center;
   z-index: 99;
+}
+.topPanel .row {
+  width: 100%;
+  padding-bottom: 3%;
+  padding-top: 3%;
+}
+.topPanel .row #course {
+  width: 75%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.topPanel .topPanel select,
+.topPanel label {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.topPanel .labelForSex {
+  font-weight: 700;
 }

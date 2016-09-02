@@ -24,6 +24,8 @@ $(function(){
 	 		$(btns[index]).addClass('hasClassName').data('className',classes[index]);
 	 		$(btns[index]).children('span').text(classes[index]);
 	 		$(btns[index]).on('click',toHasClassName);
+	 		$(btns[index]).css('background-color','#fff');
+
 	 		plusbtn_loc = index;
 	 	}
 	 	$(btns[plusbtn_loc+1]).addClass('plusBtn');
